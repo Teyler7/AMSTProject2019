@@ -5,7 +5,7 @@ console.log(`${process.env.REACT_APP_GAPI_KEY}`);
 
 const mapStyles = {
   width: '100%',
-  height: '100%'
+  height: '75%'
 };
 
 export class MapContainer extends Component {
@@ -13,7 +13,7 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
-        zoom={5}
+        zoom={4}
         style={mapStyles}
         initialCenter={{
          lat: 37.09024,
