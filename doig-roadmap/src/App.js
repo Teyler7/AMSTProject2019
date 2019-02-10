@@ -3,6 +3,8 @@ import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 
 console.log(`${process.env.REACT_APP_GAPI_KEY}`);
 
+const data = require('./markerData.json');
+
 const mapStyles = {
   width: '100%',
   height: '75%'
@@ -15,32 +17,46 @@ export class MapContainer extends Component {
     selectedPlace: {}          //Shows the infoWindow to the selected place upon a marker
   };
 
-  onMarkerClick = (props, marker, e) =>
+  onMarkerClick = (props, marker, e) =>{
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
     });
+  }
+  
+  onClose = props => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      });
+    }
+  };
 
-    onClose = props => {
-      if (this.state.showingInfoWindow) {
-        this.setState({
-          showingInfoWindow: false,
-          activeMarker: null
-        });
-      }
-    };
   render() {
     return (
+      <div>
+        <h2>Doig Roadmap</h2>
       <Map
         google={this.props.google}
-        zoom={14}
-        style={style}
-        initialCenter={{ lat: -1.2884, lng: 36.8233 }
+        zoom={4}
+        style={mapStyles}
+        initialCenter={{
+           lat: 37.09024, 
+           lng: -95.712891 
+          }}
       >
+      {/* array.forEach(element => {
+        
+      }); */}
         <Marker
           onClick={this.onMarkerClick}
-          name={'Kenyatta International Convention Centre'}
+          position={{lat: 40.736090, lng: -73.991230}}
+
+          name={'19 Union Square West, New York'}
+          date={'December, My dude'}
+          info={'lkajsdf;lkajsdl;fkjasl;dkfjal;sdfjl;kasdjl;kfaslflsjkfd;lkasfjl;kasdf'}
         />
         <InfoWindow
           marker={this.state.activeMarker}
@@ -49,9 +65,18 @@ export class MapContainer extends Component {
         >
           <div>
             <h4>{this.state.selectedPlace.name}</h4>
+            <div>
+              <div><b>
+                {this.state.selectedPlace.date}
+              </b></div>
+              <div>
+                {this.state.selectedPlace.info}
+              </div>
+            </div>
           </div>
         </InfoWindow>
       </Map>
+      </div>
     );
   }
 }
