@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
-
-console.log(`${process.env.REACT_APP_GAPI_KEY}`);
+import './App.scss';
 
 const data = require('./markerData.json');
 
@@ -17,7 +18,6 @@ export class MapContainer extends Component {
     if (`${process.env.REACT_APP_GAPI_KEY}` === 'undefined'){
       Swal.fire('Missing .env','The application is missing a .env file that must contain a Google Maps API Key. Please refer to the .env.example file for more info', 'error');
     }
-    console.log(data);
   }
   state = {
     showingInfoWindow: false,  //Hides or the shows the infoWindow
@@ -45,7 +45,10 @@ export class MapContainer extends Component {
   render() {
     return (
       <div>
-        <h2>Doig Roadmap</h2>
+        <div className="header">
+          <div><h2 className="title">Doig Roadmap</h2></div>
+          <div className="addButton"><FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/></div>
+        </div>
       <Map
         google={this.props.google}
         zoom={4}

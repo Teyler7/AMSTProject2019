@@ -1,0 +1,14 @@
+.header{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.title{
+    margin-left: 2rem;
+}
+.addButton{
+    margin-right: 2rem;
+    cursor: pointer;
+    color: red
+}
