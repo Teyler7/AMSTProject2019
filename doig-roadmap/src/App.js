@@ -55,17 +55,17 @@ export class MapContainer extends Component {
            lng: -95.712891 
           }}
       >
-      {/* array.forEach(element => {
-        
-      }); */}
+      {data.markers.map(place => (
         <Marker
-          onClick={this.onMarkerClick}
-          position={{lat: 40.736090, lng: -73.991230}}
-
-          name={'19 Union Square West, New York'}
-          date={'December, My dude'}
-          info={'lkajsdf;lkajsdl;fkjasl;dkfjal;sdfjl;kasdjl;kfaslflsjkfd;lkasfjl;kasdf'}
-        />
+            onClick={this.onMarkerClick}
+            position={{lat: place.lat, lng: place.lng}}
+            
+            name={place.locationName}
+            date={place.date}
+            info={place.info}
+        >
+        </Marker>
+    ))}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
@@ -81,6 +81,7 @@ export class MapContainer extends Component {
                 {this.state.selectedPlace.info}
               </div>
             </div>
+            <a href="https://www.w3schools.com/html/">Photo</a>
           </div>
         </InfoWindow>
       </Map>
