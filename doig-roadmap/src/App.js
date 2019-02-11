@@ -83,6 +83,7 @@ export class MapContainer extends Component {
             </div>
             <a href="https://www.w3schools.com/html/">Photo</a>
           </div>
+          {/* <Info></Info> */}
         </InfoWindow>
       </Map>
       </div>
