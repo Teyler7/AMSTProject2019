@@ -16,8 +16,8 @@ export class MapContainer extends Component {
     //If missing 
     if (`${process.env.REACT_APP_GAPI_KEY}` === 'undefined'){
       Swal.fire('Missing .env','The application is missing a .env file that must contain a Google Maps API Key. Please refer to the .env.example file for more info', 'error');
-
     }
+    console.log(data);
   }
   state = {
     showingInfoWindow: false,  //Hides or the shows the infoWindow
