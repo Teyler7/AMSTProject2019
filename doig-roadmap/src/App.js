@@ -59,6 +59,7 @@ export class MapContainer extends Component {
       >
       {data.markers.map(place => (
         <Marker
+            key={place.id}
             onClick={this.onMarkerClick}
             position={{lat: place.lat, lng: place.lng}}
             

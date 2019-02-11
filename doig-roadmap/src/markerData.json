@@ -1,6 +1,7 @@
 {
     "markers": [
         {
+            "id": 1,
             "locationName": "19 Union Square: New York, New York 10003",
             "lat": 40.736090,
             "lng": -73.991230,
@@ -9,6 +10,7 @@
             "photo": ""
         },
         {
+            "id": 2,
             "locationName": "5015 Ivanhoe Place. Seattle, Washington 98105",
             "lat": 47.665120,
             "lng": -122.270120,
@@ -17,6 +19,7 @@
             "photo": ""
         },
         {
+            "id": 3,
             "locationName": "5015 Ivanhoe Place. Seattle, Washington 98105",
             "lat": 47.665120,
             "lng": -122.270120,
@@ -25,6 +28,7 @@
             "photo": ""
         },
         {
+            "id": 4,
             "locationName": "17021 10th NW. Seattle, WA 98177",
             "lat": 47.753300,
             "lng": -122.371430,
@@ -33,6 +37,7 @@
             "photo": ""
         },
         {
+            "id": 5,
             "locationName": "757 Third Avenue. New York, N.Y. 10017",
             "lat": 40.753940,
             "lng": -73.971600,
@@ -41,6 +46,7 @@
             "photo": ""
         },
         {
+            "id": 6,
             "locationName": "Doig Homestead. Sixteen, MT",
             "lat": 46.478040,
             "lng": -110.681080,

@@ -8,7 +8,7 @@ export default class LocationsList extends Component {
         <div className="list">
             <h3 className="title">Locations:</h3>
             {this.props.data.map(place => (
-              <div className="list-container">
+              <div className="list-container" key={place.id}>
               <FontAwesomeIcon icon={faMapPin} color="red"/><span className="list-element">{place.locationName}</span>
               </div>
             ))}
