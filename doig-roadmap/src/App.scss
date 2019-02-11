@@ -11,11 +11,19 @@
 .addButton{
     margin-right: 2rem;
     cursor: pointer;
-    color: red
+    color: red;
+}
+.list-container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: .5rem;
+    
+    &:hover{
+        background-color: lightgrey;
+        cursor: pointer;
+    }
 }
 
-.map{
-    display: block;
-}
-.list{
+.list-element{
+    margin-left: .25rem;
 }

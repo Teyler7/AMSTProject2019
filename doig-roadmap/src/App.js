@@ -10,7 +10,7 @@ const data = require('./markerData.json');
 
 const mapStyles = {
   width: '100%',
-  height: '75%'
+  height: '60%'
 };
 
 export class MapContainer extends Component {
@@ -45,9 +45,9 @@ export class MapContainer extends Component {
 
   render() {
     return (
-      <div className="map">
+      <div>
         <Header></Header>
-        <LocationsList></LocationsList>
+        <LocationsList data={data.markers}></LocationsList>
       <Map
         google={this.props.google}
         zoom={4}
