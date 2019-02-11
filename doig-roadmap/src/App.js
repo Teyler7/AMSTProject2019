@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
+import Swal from 'sweetalert2'
 
 console.log(`${process.env.REACT_APP_GAPI_KEY}`);
 
@@ -11,6 +12,13 @@ const mapStyles = {
 };
 
 export class MapContainer extends Component {
+  componentDidMount(){
+    //If missing 
+    if (`${process.env.REACT_APP_GAPI_KEY}` === 'undefined'){
+      Swal.fire('Missing .env','The application is missing a .env file that must contain a Google Maps API Key. Please refer to the .env.example file for more info', 'error');
+
+    }
+  }
   state = {
     showingInfoWindow: false,  //Hides or the shows the infoWindow
     activeMarker: {},          //Shows the active marker upon click
