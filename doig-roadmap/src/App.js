@@ -42,12 +42,55 @@ export class MapContainer extends Component {
     }
   };
 
+  onAddButtonClick = props => {
+    Swal.mixin({
+      input: 'text',
+      confirmButtonText: 'Next &rarr;',
+      showCancelButton: true,
+      progressSteps: ['1', '2', '3', '4', '5']
+    }).queue([
+      {
+        title: 'Location Name',
+        text: 'Enter the name of the location to add to the map'
+      },
+      {
+        title: 'Latitude',
+        text: 'Enter the latitude of the location'
+      },
+      {
+        title: 'Longitude',
+        text: 'Enter the longitude of the location'
+      },
+      {
+        title: 'Date',
+        text: 'Enter the date of the resource'
+      },
+      {
+        title: 'Meta Data',
+        text: 'Enter some meta data about this resource'
+      }
+
+    ]).then((result) => {
+      if (result.value) {
+        Swal.fire({
+          title: 'Success!',
+          type: 'success',
+          html:
+            'Your answers: <pre><code>' +
+              JSON.stringify(result.value) +
+            '</code></pre>',
+          confirmButtonText: 'Lovely!'
+        });
+      }
+    })
+  }
+
   render() {
     return (
       <div>
         <div className="header">
           <div><h2 className="title">Doig Roadmap</h2></div>
-          <div className="addButton"><FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/></div>
+          <div className="addButton" onClick={this.onAddButtonClick}><FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/></div>
         </div>
       <Map
         google={this.props.google}
