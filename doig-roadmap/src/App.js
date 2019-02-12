@@ -76,7 +76,8 @@ export class MapContainer extends Component {
            lng: -95.712891 
           }}
       >
-      {data.markers.map(place => (
+      {data.markers.map((place) => {
+        return (
         <Marker
             ref={this.onMarkerMounted}
             key={place.id}
@@ -87,9 +88,9 @@ export class MapContainer extends Component {
             date={place.date}
             info={place.info}
             photos={place.photos}
-        >
-        </Marker>    
-    ))}
+        ></Marker>    
+        )
+      })}
         <InfoWindow
           marker={this.state.activeMarker}
           visible={this.state.showingInfoWindow}
