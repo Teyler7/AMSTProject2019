@@ -5,6 +5,7 @@ import './App.scss';
 
 import Header from "./components/Header"
 import LocationsList from "./components/LocationsList"
+import Info from './components/Info'
 
 const data = require('./markerData.json');
 
@@ -89,19 +90,7 @@ export class MapContainer extends Component {
           visible={this.state.showingInfoWindow}
           onClose={this.onClose}
         >
-          <div>
-            <h4>{this.state.selectedPlace.name}</h4>
-            <div>
-              <div><b>
-                {this.state.selectedPlace.date}
-              </b></div>
-              <div>
-                {this.state.selectedPlace.info}
-              </div>
-            </div>
-            <a href="https://www.w3schools.com/html/">Photo</a>
-          </div>
-          {/* <Info></Info> */}
+          <Info data={this.state.selectedPlace}></Info>
         </InfoWindow>
       </Map>
       </div>
