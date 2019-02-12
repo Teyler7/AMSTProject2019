@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 
 export default class Info extends Component {
     render() {
+        let photoDom = []
+        if (this.props.data.photos != null) {
+            photoDom = this.props.data.photos.map((photo, index) => {
+                return (
+                    <FontAwesomeIcon key={index} className="photo" icon={faCameraRetro} color="blue" onClick={() => {this.onPhotoClick(photo)}}></FontAwesomeIcon>
+                )
+            })
+        }
         return (
             <div>
             <h4>{this.props.data.name}</h4>
@@ -13,7 +23,7 @@ export default class Info extends Component {
                 {this.props.data.info}
               </div>
             </div>
-            <a href="https://www.w3schools.com/html/">Photo</a>
+            {photoDom}
           </div>
         )
     }

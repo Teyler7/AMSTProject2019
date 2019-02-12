@@ -5,18 +5,21 @@
     width: 100%;
     border-bottom: 1px solid grey
 }
+
 .title{
     margin-left: 2rem;
 }
+
 .addButton{
     margin-right: 2rem;
     cursor: pointer;
     color: red;
 }
+
 .list-container{
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     
     &:hover{
         background-color: lightgrey;
@@ -26,4 +29,9 @@
 
 .list-element{
     margin-left: .25rem;
+}
+
+.photo{
+    margin: .25rem;
+    cursor: pointer;
 }

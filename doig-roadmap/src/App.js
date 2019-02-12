@@ -11,7 +11,7 @@ const data = require('./markerData.json');
 
 const mapStyles = {
   width: '100%',
-  height: '60%'
+  height: '50%'
 };
 
 export class MapContainer extends Component {
@@ -57,6 +57,11 @@ export class MapContainer extends Component {
     }
   };
 
+  onPhotoClick = (photo) => {
+    console.log("hi");
+    console.log(photo);
+}
+
   render() {
     return (
       <div>
@@ -64,7 +69,7 @@ export class MapContainer extends Component {
         <LocationsList onClick={this.onMarkerClick} data={data.markers}  markerData={this.state.markerObjects}></LocationsList>
       <Map
         google={this.props.google}
-        zoom={4}
+        zoom={3.5}
         style={mapStyles}
         initialCenter={{
            lat: 37.09024, 
@@ -81,9 +86,9 @@ export class MapContainer extends Component {
             name={place.locationName}
             date={place.date}
             info={place.info}
+            photos={place.photos}
         >
-        </Marker>
-        
+        </Marker>    
     ))}
         <InfoWindow
           marker={this.state.activeMarker}
