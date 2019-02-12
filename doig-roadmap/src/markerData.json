@@ -7,7 +7,16 @@
             "lng": -73.991230,
             "date": "December 10th, 1976",
             "info": "Ann Nelson, Doig’s agent, is author, Aaron Asher is the recipient. Publishing Company is Farrar, Straus & Giroux, Inc. In NY. Ann is persuading Aaron to publish Doig by enclosing two sections of his Half-Life ms. She is lobbying for him by describing his works and what he has accomplished. ",
-            "photo": ""
+            "photos":[
+                {
+                    "name": "",
+                    "photoId": "1-1" 
+                },
+                {
+                    "name": "",
+                    "photoId": "1-2" 
+                }
+            ]
         },
         {
             "id": 2,
@@ -16,7 +25,12 @@
             "lng": -122.270120,
             "date": "March 24th, 1977",
             "info": "Author Carol Hill, recipient Ann Nelson. Hill is considering publishing Half-Life, she describes it as “an unusual kind of book”. She needs time to decide but it is under “serious consideration”.",
-            "photo": ""
+            "photos": [
+                {
+                    "name": "",
+                    "photoId": "2-1" 
+                }
+            ]
         },
         {
             "id": 3,
@@ -25,7 +39,12 @@
             "lng": -122.270120,
             "date": "March 28th, 1977",
             "info": "Natalie Chapman is the author, recipient is Ann Nelson. Rejection letter, stating it would be a better “regional published” book. Chapman was glad to have read it and thinks it does hold some value, but it does not make economic and regional sense for them to publish it.",
-            "photo": ""
+            "photos": [
+                {
+                    "name": "",
+                    "photoId": "3-1" 
+                }
+            ]
         },
         {
             "id": 4,
@@ -34,7 +53,16 @@
             "lng": -122.371430,
             "date": "January 31, 1978",
             "info": "Author Carol Hill, Senior Editor of HBJ in NY, recipient Doig. Editorial changes to HoS. The changes are in reference to description and word choice, she claims them to be “too much lyrical abstraction”. There were also uneven anecdotes that “weren’t adding too much at that point”. Hill also claims an admiration and excitement to be publishing the book at this stage.",
-            "photo": ""
+            "photos": [
+                {
+                    "name": "",
+                    "photoId": "4-1" 
+                },
+                {
+                    "name": "",
+                    "photoId": "4-2" 
+                }
+            ]
         },
         {
             "id": 5,
@@ -43,7 +71,16 @@
             "lng": -73.971600,
             "date": "February 13th, 1978",
             "info": "Response on editorial changes to HoS ms. Doig is author, Carol Hill is the recipient. Defending his word choice and descriptive details.",
-            "photo": ""
+            "photos": [
+                {
+                    "name": "",
+                    "photoId": "5-1" 
+                },
+                {
+                    "name": "",
+                    "photoId": "5-2" 
+                }
+            ]
         },
         {
             "id": 6,
@@ -52,7 +89,16 @@
             "lng": -110.681080,
             "date": "August 15th, 1991",
             "info": "D.L. Doig homestead in Tierney Basin near Sixteen, MT. Letter from Nancy Anderson",
-            "photo": ""
+            "photos": [
+                {
+                    "name": "",
+                    "photoId": "6-1" 
+                },
+                {
+                    "name": "",
+                    "photoId": "6-2" 
+                }
+            ]
         }
     ]
 }
