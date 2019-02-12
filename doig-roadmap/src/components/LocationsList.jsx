@@ -7,9 +7,9 @@ export default class LocationsList extends Component {
     return (
         <div className="list">
             <h3 className="title">Locations:</h3>
-            {this.props.data.map(place => (
-              <div className="list-container" key={place.id}>
-              <FontAwesomeIcon icon={faMapPin} color="red"/><span className="list-element">{place.locationName}</span>
+            {this.props.markerData.map((marker, index) => (
+              <div  onClick={() => this.props.onClick(this.props.data[index], marker)} className="list-container" key={index}>
+              <FontAwesomeIcon icon={faMapPin} color="red"/><span className="list-element">{marker.name}</span>
               </div>
             ))}
         </div> 

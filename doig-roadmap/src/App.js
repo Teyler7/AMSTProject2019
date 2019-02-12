@@ -14,19 +14,32 @@ const mapStyles = {
 };
 
 export class MapContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      markerObjects: [],
+      showingInfoWindow: false,  //Hides or the shows the infoWindow
+      activeMarker: {},          //Shows the active marker upon click
+      selectedPlace: {}     
+    };
+
+    this.onMarkerMounted = element => {
+      this.setState(prevState => ({
+        markerObjects: [...prevState.markerObjects, element.marker]
+      }))
+    };
+  }
+
   componentDidMount(){
     //If missing 
     if (`${process.env.REACT_APP_GAPI_KEY}` === 'undefined'){
       Swal.fire('Missing .env','The application is missing a .env file that must contain a Google Maps API Key. Please refer to the .env.example file for more info', 'error');
     }
   }
-  state = {
-    showingInfoWindow: false,  //Hides or the shows the infoWindow
-    activeMarker: {},          //Shows the active marker upon click
-    selectedPlace: {}          //Shows the infoWindow to the selected place upon a marker
-  };
 
   onMarkerClick = (props, marker, e) =>{
+    console.log(props);
+    console.log(marker);
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
@@ -47,7 +60,7 @@ export class MapContainer extends Component {
     return (
       <div>
         <Header></Header>
-        <LocationsList data={data.markers}></LocationsList>
+        <LocationsList onClick={this.onMarkerClick} data={data.markers}  markerData={this.state.markerObjects}></LocationsList>
       <Map
         google={this.props.google}
         zoom={4}
@@ -59,6 +72,7 @@ export class MapContainer extends Component {
       >
       {data.markers.map(place => (
         <Marker
+            ref={this.onMarkerMounted}
             key={place.id}
             onClick={this.onMarkerClick}
             position={{lat: place.lat, lng: place.lng}}
@@ -68,6 +82,7 @@ export class MapContainer extends Component {
             info={place.info}
         >
         </Marker>
+        
     ))}
         <InfoWindow
           marker={this.state.activeMarker}
