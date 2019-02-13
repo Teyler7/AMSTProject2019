@@ -62,6 +62,10 @@ export class MapContainer extends Component {
 
   onPhotoClick = (photo) => {
     console.log(photo);
+    Swal.fire({
+      title: photo.name,
+      imageUrl: 'https://unsplash.it/400/200'
+    })
 }
 
   render() {
