@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, Marker, InfoWindow } from 'google-maps-react';
 import Swal from 'sweetalert2'
 import './App.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCameraRetro } from '@fortawesome/free-solid-svg-icons'
 
 import Header from "./components/Header"
 import LocationsList from "./components/LocationsList"
@@ -11,10 +13,11 @@ const data = require('./markerData.json');
 
 const mapStyles = {
   width: '100%',
-  height: '50%'
+  height: '45%'
 };
 
 export class MapContainer extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -58,15 +61,27 @@ export class MapContainer extends Component {
   };
 
   onPhotoClick = (photo) => {
-    console.log("hi");
     console.log(photo);
 }
 
   render() {
+
+    let photoListDom = []
+        if (this.state.selectedPlace.photos != null) {
+            photoListDom = this.state.selectedPlace.photos.map((photo, index) => {
+                return (
+                    <FontAwesomeIcon key={index} className="list-photo" icon={faCameraRetro} color="blue" onClick={() => this.onPhotoClick(photo)}></FontAwesomeIcon>
+                )
+            })
+        }
+
     return (
       <div>
         <Header></Header>
         <LocationsList onClick={this.onMarkerClick} data={data.markers}  markerData={this.state.markerObjects}></LocationsList>
+        <div className="title">
+         {photoListDom}
+        </div>
       <Map
         google={this.props.google}
         zoom={3.5}
@@ -98,7 +113,7 @@ export class MapContainer extends Component {
         >
           <Info data={this.state.selectedPlace}></Info>
         </InfoWindow>
-      </Map>
+      </Map>    
       </div>
     );
   }
