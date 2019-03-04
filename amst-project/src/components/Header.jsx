@@ -51,7 +51,7 @@ export default class Header extends Component {
   render() {
     return (
         <div className="header">
-            <div><h2 className="title">Doig Roadmap</h2></div>
+            <div><h2 className="title">Digital America 2019</h2></div>
             <div className="addButton" onClick={this.onAddButtonClick}><FontAwesomeIcon icon={faMapMarkerAlt} size="2x"/></div>
       </div>
     );
