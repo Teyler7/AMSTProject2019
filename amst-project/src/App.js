@@ -9,7 +9,7 @@ import Header from "./components/Header"
 import LocationsList from "./components/LocationsList"
 import Info from './components/Info'
 
-const data = require('./markerData.json');
+const data = require('./data/markerData.json');
 
 const mapStyles = {
   width: '100%',

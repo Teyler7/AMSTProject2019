@@ -1,0 +1,113 @@
+{
+    "plot": [{
+            "year": 1899,
+            "count": 2570
+        },
+        {
+            "year": 1904,
+            "count": 3168
+        },
+        {
+            "year": 1909,
+            "count": 3767
+        },
+        {
+            "year": 1914,
+            "count": 4220
+        },
+        {
+            "year": 1919,
+            "count": 4280
+        },
+        {
+            "year": 1921,
+            "count": 2225
+        },
+        {
+            "year": 1923,
+            "count": 2799
+        },
+        {
+            "year": 1925,
+            "count": 2722
+        },
+        {
+            "year": 1927,
+            "count": 2773
+        },
+        {
+            "year": 1929,
+            "count": 3365
+        },
+        {
+            "year": 1931,
+            "count": 2839
+        },
+        {
+            "year": 1933,
+            "count": 2336
+        },
+        {
+            "year": 1935,
+            "count": 3018
+        },
+        {
+            "year": 1937,
+            "count": 3093
+        },
+        {
+            "year": 1939,
+            "count": 3058
+        },
+        {
+            "year": 1947,
+            "count": 3825
+        },
+        {
+            "year": 1949,
+            "count": 0
+        },
+        {
+            "year": 1950,
+            "count": 0
+        },
+        {
+            "year": 1951,
+            "count": 0
+        },
+        {
+            "year": 1952,
+            "count": 0
+        },
+        {
+            "year": 1953,
+            "count": 0
+        },
+        {
+            "year": 1954,
+            "count": 3513
+        }
+    ],
+    "eras": [
+        {
+            "eraName": "Industrial Revolution",
+            "years" : ""
+        },
+        {
+            "eraName": "World War 1",
+            "years" : ""
+        },
+        {
+            "eraName": "Depression",
+            "years" : ""
+        },
+        {
+            "eraName": "World Ware 2",
+            "years" : ""
+        },
+        {
+            "eraName": "Post War",
+            "years" : ""
+        }
+    ]
+}
