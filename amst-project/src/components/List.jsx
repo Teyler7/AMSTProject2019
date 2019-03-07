@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faMapPin } from '@fortawesome/free-solid-svg-icons'
 
-export default class LocationsList extends Component {
+export default class List extends Component {
   render() {
     return (
         <div className="list">

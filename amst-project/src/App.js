@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './sass/App.scss';
 
 import Header from "./components/Header"
 import List from "./components/List"
+import Histogram from './components/Histogram';
 const data = require('./data/canningData.json');
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
       <div>
         <Header></Header>
         {/* <List markerData={this.state.}></List> */}
+        <Histogram></Histogram>
       </div>
     );
   }
