@@ -13,7 +13,7 @@ export default class App extends Component {
       <div>
         <Header></Header>
         {/* <List markerData={this.state.}></List> */}
-        <Histogram></Histogram>
+        <Histogram data={data}></Histogram>
       </div>
     );
   }
