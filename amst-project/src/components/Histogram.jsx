@@ -6,7 +6,8 @@ export default class Histogram extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          crosshairValues: ["asdf"]
+          crosshairValues: [""],
+          index: 0
         };
       }
   render() {
@@ -18,14 +19,20 @@ export default class Histogram extends Component {
             <XAxis />
             <YAxis />
             <VerticalRectSeries data={this.props.data.eras} colorRange={[/*From Red*/"#ff0000", "#0000ff"/*To Blue*/]}  opacity={.45}/>
-            <LineSeries color={"black"} data={this.props.data.plot}/>
+            <LineSeries color={"black"} data={this.props.data.plot}
+                onNearestX={(value, {index}) =>{
+                    console.log(index)
+                    this.setState({crosshairValues: this.props.data.plot.map(d => d)})
+                    this.setState({index: index})
+                    console.log(this.state)}
+                }
+            />
             <Crosshair values={this.state.crosshairValues}>
-                <div style={{background: 'black'}}>
-                    <h3>Values of crosshair:</h3>
-                    <p>Series 1:</p>
-                    <p>Series 2:</p>
-                </div>
-            </Crosshair>
+                    <div style={{ background: 'black' }}>
+                        <h2>Year: {this.state.crosshairValues[this.state.index].x}</h2>
+                        <h2>Count: {this.state.crosshairValues[this.state.index].y}</h2>
+                    </div>
+                </Crosshair>
         </XYPlot>
       </div>
     );
