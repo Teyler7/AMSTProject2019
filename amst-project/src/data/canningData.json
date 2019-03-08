@@ -65,23 +65,23 @@
         },
         {
             "x": 1949,
-            "y": 0
+            "y": 3725
         },
         {
             "x": 1950,
-            "y": 0
+            "y": 3725
         },
         {
             "x": 1951,
-            "y": 0
+            "y": 3600
         },
         {
             "x": 1952,
-            "y": 0
+            "y": 3600
         },
         {
             "x": 1953,
-            "y": 0
+            "y": 3600
         },
         {
             "x": 1954,
@@ -91,23 +91,43 @@
     "eras": [
         {
             "eraName": "Industrial Revolution (late 1800s into early 1900s)",
-            "information" : "Following the research done in France and Great Britain about food preservation, entrepreneurs in the United States began to explore canning techniques and processes. The Civil War greatly increased the production of cans. The United States Government began to invest in canneries all over the country. As the industrial revolution created mass migration to urban areas, cans became a staple of the regular American’s life. People no longer had the ability to grow and produce their own food."
+            "information" : "Following the research done in France and Great Britain about food preservation, entrepreneurs in the United States began to explore canning techniques and processes. The Civil War greatly increased the production of cans. The United States Government began to invest in canneries all over the country. As the industrial revolution created mass migration to urban areas, cans became a staple of the regular American’s life. People no longer had the ability to grow and produce their own food.",
+            "x0": 1899,
+            "x": 1910,
+            "y": 4280,
+            "color": "red"
         },
         {
             "eraName": "World War I (1914-1918)",
-            "information" : "World War I created an even larger need for canneries. The military bought large amounts of canned foods for soldiers overseas. The factories now hard stronger technology. There were increases of both supply and demand. Montana canneries began to produce large amounts of vegetables. Gallatin Valley was known as the pea capital of the world. The area produced 75% of the world’s pea crop. In 1917 Bozeman Cannery opened and started to produce 13,000 cases of peas each day."
+            "information" : "World War I created an even larger need for canneries. The military bought large amounts of canned foods for soldiers overseas. The factories now hard stronger technology. There were increases of both supply and demand. Montana canneries began to produce large amounts of vegetables. Gallatin Valley was known as the pea capital of the world. The area produced 75% of the world’s pea crop. In 1917 Bozeman Cannery opened and started to produce 13,000 cases of peas each day.",
+            "x0": 1914,
+            "x": 1918,
+            "y": 4280,
+            "color": "blue"
         },
         {
             "eraName": "Great Depression (1930’s)",
-            "information" : "The canning industry was impacted by droughts and the dust bowl. In Montana, farmers all over the state had poor crop years due to drought, grasshoppers, and lack of money to invest in new resources. Without the crops, canneries had nothing to can. Business was slow and affected the employment of people all over the region. Government programs and the United States deciding to join World War II helped push farmers back on their feet. It also greatly increased the need for canneries."
+            "information" : "The canning industry was impacted by droughts and the dust bowl. In Montana, farmers all over the state had poor crop years due to drought, grasshoppers, and lack of money to invest in new resources. Without the crops, canneries had nothing to can. Business was slow and affected the employment of people all over the region. Government programs and the United States deciding to join World War II helped push farmers back on their feet. It also greatly increased the need for canneries.",
+            "x0": 1930,
+            "x": 1939,
+            "y": 4280,
+            "color": "purple"
         },
         {
             "eraName": "World War II (1939-1945)",
-            "information" : "World War II saw huge production for canned food. During the war, the 70% of food soldiers and military personal ate was canned. Canneries all over the country benefited from the increase in demand. In Montana, the majority of cannery workers were not white men. The draft left behind jobs that needed to be filled and were- by women, immigrants, and high schoolers. At the Bozeman cannery, people earned wages between $.40 - $.50 an hour."
+            "information" : "World War II saw huge production for canned food. During the war, the 70% of food soldiers and military personal ate was canned. Canneries all over the country benefited from the increase in demand. In Montana, the majority of cannery workers were not white men. The draft left behind jobs that needed to be filled and were- by women, immigrants, and high schoolers. At the Bozeman cannery, people earned wages between $.40 - $.50 an hour.",
+            "x0": 1939,
+            "x": 1945,
+            "y": 4280,
+            "color": "red"
         },
         {
             "eraName": "Post War Period (1950s and 1960s)",
-            "information" : "After World War II, canning continued to be a multibillion dollar industry. However, Montana and places all over the US saw a decline in canneries. One cannery that still exists in Montana stated they faced bad crop years and a decrease in the demand for their product. The product they product now is not even canned; their cherries are frozen and shipped out to suppliers. Federal regulations, especially involving pollution, have also contributed to closing of canneries. There are also more countries who are competing for food both in supply and preservation."
+            "information" : "After World War II, canning continued to be a multibillion dollar industry. However, Montana and places all over the US saw a decline in canneries. One cannery that still exists in Montana stated they faced bad crop years and a decrease in the demand for their product. The product they product now is not even canned; their cherries are frozen and shipped out to suppliers. Federal regulations, especially involving pollution, have also contributed to closing of canneries. There are also more countries who are competing for food both in supply and preservation.",
+            "x0": 1950,
+            "x": 1954,
+            "y": 4280,
+            "color": "black"
         }
     ]
 }
