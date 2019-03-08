@@ -17,15 +17,15 @@ export default class Histogram extends Component {
             <HorizontalGridLines />
             <XAxis />
             <YAxis />
-            <VerticalRectSeries data={this.props.data.eras} color={"blue"}/>
-            <LineSeries data={this.props.data.plot}/>
+            <VerticalRectSeries data={this.props.data.eras} colorRange={[/*From Red*/"#ff0000", "#0000ff"/*To Blue*/]}  opacity={.45}/>
+            <LineSeries color={"black"} data={this.props.data.plot}/>
             <Crosshair values={this.state.crosshairValues}>
-  <div style={{background: 'black'}}>
-    <h3>Values of crosshair:</h3>
-    <p>Series 1:</p>
-    <p>Series 2:</p>
-  </div>
-</Crosshair>
+                <div style={{background: 'black'}}>
+                    <h3>Values of crosshair:</h3>
+                    <p>Series 1:</p>
+                    <p>Series 2:</p>
+                </div>
+            </Crosshair>
         </XYPlot>
       </div>
     );

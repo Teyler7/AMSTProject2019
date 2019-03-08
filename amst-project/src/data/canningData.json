@@ -95,7 +95,8 @@
             "x0": 1899,
             "x": 1910,
             "y": 4280,
-            "color": "red"
+            "color": "0",
+            "rgb": "rgb(255, 0, 0)"
         },
         {
             "eraName": "World War I (1914-1918)",
@@ -103,15 +104,17 @@
             "x0": 1914,
             "x": 1918,
             "y": 4280,
-            "color": "blue"
+            "color": "1",
+            "rgb": "rgb(191, 0, 64)"
         },
         {
             "eraName": "Great Depression (1930’s)",
             "information" : "The canning industry was impacted by droughts and the dust bowl. In Montana, farmers all over the state had poor crop years due to drought, grasshoppers, and lack of money to invest in new resources. Without the crops, canneries had nothing to can. Business was slow and affected the employment of people all over the region. Government programs and the United States deciding to join World War II helped push farmers back on their feet. It also greatly increased the need for canneries.",
             "x0": 1930,
-            "x": 1939,
+            "x": 1938,
             "y": 4280,
-            "color": "purple"
+            "color": "2",
+            "rgb": "rgb(128, 0, 128)"
         },
         {
             "eraName": "World War II (1939-1945)",
@@ -119,7 +122,8 @@
             "x0": 1939,
             "x": 1945,
             "y": 4280,
-            "color": "red"
+            "color": "3",
+            "rgb": "rgb(64, 0, 191)"
         },
         {
             "eraName": "Post War Period (1950s and 1960s)",
@@ -127,7 +131,8 @@
             "x0": 1950,
             "x": 1954,
             "y": 4280,
-            "color": "black"
+            "color": "4",
+            "rgb": "rgb(0, 0, 255)"
         }
     ]
 }
