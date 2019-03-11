@@ -22,18 +22,15 @@
 }
 
 .canning-button{
-    opacity: .5;
+    cursor: pointer;
 
     &:hover{
-        opacity: 1;
-    }
-    &:focus{
-        opacity: 1;
+        opacity: 1 !important;
     }
 }
 
 .picture {
-    max-height: 300px;
+    max-height: 280px;
     margin-left: 10rem;
     margin-top: 2rem;
 }

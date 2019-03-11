@@ -30,18 +30,20 @@ export default class Histogram extends Component {
           <VerticalRectSeries
             data={this.props.data.eras}
             colorRange={[/*From Red*/ "#ff0000", "#0000ff" /*To Blue*/]}
-            opacity={0.45}
+            // opacity={0.50}
+            onValueClick = {(data) => {
+              console.log(data)
+              this.props.customClick(data.id);
+            }}
           />
           <LineSeries
             color={"black"}
             data={this.props.data.plot}
             onNearestX={(value, { index }) => {
-              console.log(index);
               this.setState({
                 crosshairValues: this.props.data.plot.map(d => d)
               });
               this.setState({ index: index });
-              console.log(this.state);
             }}
           />
           <Crosshair values={this.state.crosshairValues}>
