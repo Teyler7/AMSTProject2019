@@ -31,9 +31,10 @@ export default class App extends Component {
                 {data.eras.map(era => (
                   <li>
                     <button
+                      style={{ backgroundColor: era.rgb, color: "white"}} 
                       onClick={() => this.handleClick(era.id)}
                       key={era.id}
-                      className="btn btn-outline-success m-2"
+                      className="btn m-2 canning-button"
                     >
                       {era.eraName}
                     </button>
