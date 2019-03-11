@@ -21,13 +21,7 @@ export default class App extends Component {
     return (
       <div>
         <Header />
-        <div className="container px-sm">
-          <div className="row">
-            <div className="col-1" />
-            <div className="col">
-              <h1>Story of Cans</h1>
-            </div>
-          </div>
+        <div className="container px-md, main-content">
           <div className="row">
             <div className="col">
               <h2>
@@ -48,12 +42,17 @@ export default class App extends Component {
               </ul>
             </div>
             <div className="col">
-              <img src={pic} alt="" />
+              <img className="picture" src={pic} alt="" />
             </div>
           </div>
           {/* <List markerData={this.state.}></List> */}
           <div className="row">
             <Histogram data={data} />
+          </div>
+          <div className="row">
+            <div className="col">
+              <h2>{this.handleTitle()}</h2>
+            </div>
           </div>
           <div className="row">
             <div className="col">
@@ -67,6 +66,11 @@ export default class App extends Component {
   handleInfo() {
     if (this.state.index != null) {
       return data.eras[this.state.index].information;
+    }
+  }
+  handleTitle() {
+    if (this.state.index != null) {
+      return data.eras[this.state.index].eraName;
     }
   }
 }
