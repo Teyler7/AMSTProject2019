@@ -15,20 +15,15 @@ export default class App extends Component {
 
   handleClick = eraId => {
     this.setState({ index: eraId });
-    console.log(eraId)
-
     data.eras.forEach(era => {
       era.opacity = .5; //Resets Opacity
     });
 
     var found = data.eras.findIndex(function(element) {
-      console.log(element.id);
       return element.id === eraId;
     });
 
-    data.eras[found].opacity = 1;
-
-    console.log(found)
+    data.eras[found].opacity = .85;
   }
   handleInfo() {
     if (this.state.index != null) {
@@ -48,16 +43,13 @@ export default class App extends Component {
         <div className="container px-md, main-content">
           <div className="row">
             <div className="col">
-              <h2>
-                <u>Eras</u>
-              </h2>
+              <h2>Eras:</h2>
               <ul>
-                {data.eras.map(era => (
-                  <li>
+                {data.eras.map((era) => (
+                  <li key={era.id}>
                     <button
                       style={{ backgroundColor: era.rgb, color: "white", opacity: era.opacity}} 
                       onClick={() => this.handleClick(era.id)}
-                      key={era.id}
                       className="btn m-2 canning-button"
                     >
                       {era.eraName}

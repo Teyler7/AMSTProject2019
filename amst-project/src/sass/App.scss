@@ -25,14 +25,14 @@
     cursor: pointer;
 
     &:hover{
-        opacity: 1 !important;
+        opacity: .65 !important;
     }
 }
 
 .picture {
     max-height: 280px;
     margin-left: 10rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .list-container{

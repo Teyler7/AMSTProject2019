@@ -40,6 +40,7 @@ export default class Histogram extends Component {
             color={"black"}
             data={this.props.data.plot}
             onNearestX={(value, { index }) => {
+              console.log(index);
               this.setState({
                 crosshairValues: this.props.data.plot.map(d => d)
               });
